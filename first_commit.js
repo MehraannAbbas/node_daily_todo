@@ -1,9 +1,11 @@
-const EventEmitter = require('events');
-const emmiter = new EventEmitter();
 
-emmiter.on('messagelogged',(arg) =>{
-    console.log('listener called', arg);
+const EventEmitter = require('events');
+
+const Logger = require('./logger');
+const logger = new Logger();
+
+logger.on('messagelogged', (arg) => {
+    console.log('Listener called', arg);
 });
 
-
-emmiter.emit('messagelogged', { id: 1, url:'http//'});
+logger.log('message');
