@@ -1,7 +1,7 @@
 const EventEmitter = require('events');
 const emmiter = new EventEmitter();
 
-emmiter.on('messagelogged',function(arg){
+emmiter.on('messagelogged',(arg) =>{
     console.log('listener called', arg);
 });
 
