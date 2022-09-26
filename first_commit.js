@@ -1,2 +1,3 @@
-// first commit
-console.log('yes')
+function getName() {
+    console.log('name')
+}
