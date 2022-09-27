@@ -1,0 +1,23 @@
+{
+  "name": "node_daily_todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "first_commit.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MehraannAbbas/node_daily_todo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MehraannAbbas/node_daily_todo/issues"
+  },
+  "homepage": "https://github.com/MehraannAbbas/node_daily_todo#readme",
+  "dependencies": {
+    "underscore": "^1.13.6"
+  }
+}
