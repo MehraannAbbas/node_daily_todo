@@ -2,7 +2,7 @@
   "name": "node_daily_todo",
   "version": "1.0.0",
   "description": "",
-  "main": "first_commit.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/MehraannAbbas/node_daily_todo#readme",
   "dependencies": {
-    "underscore": "^1.13.6"
+    "express": "^4.18.1"
   }
 }
