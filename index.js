@@ -5,9 +5,12 @@ const app = express();
 app.use(express.json());
 
 const courses = [
+    { id: 0, name: 'course0' },
     { id: 1, name: 'course1' },
     { id: 2, name: 'course2' },
     { id: 3, name: 'course3' },
+    { id: 4, name: 'course4' },
+    { id: 3, name: 'course5' },
 ];
 
 app.get('/', (req, res) => {
@@ -45,6 +48,18 @@ app.put('/api/courses/:id', (req, res) => {
 
 course.name = req.body.name;
 res.send(course);
+});
+
+
+app.delete('/api/courses/:id', (req, res) => {
+    const course = courses.find(c => c.id === parseInt(req.params.id));
+   if(!course) res.status(404).send('The course with given id was not found');
+
+   const index = courses.indexOf(course);
+   courses.splice(index, 1);
+
+   res.send(course);
+
 });
 
 function validateCourse(course) {
