@@ -8,7 +8,11 @@ const app = express();
 
 app.use(express.json());
 app.use(helmet());
+
+if (app.get('env') === 'development') {
 app.use(morgan('tiny'));
+console.log('Morgan enabled......!');
+}
 
 app.use(logger);
 app.use(authentic);
