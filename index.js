@@ -6,6 +6,9 @@ const authentic = require('./authentic');
 const express = require('express');
 const app = express();
 
+app.set('view engine', 'pug');
+app.set('views', './views');
+
 app.use(express.json());
 app.use(helmet());
 
@@ -27,7 +30,7 @@ const courses = [
 ];
 
 app.get('/', (req, res) => {
-    res.send("Hellow World");
+    res.render('index', { tittle: 'My Express App', message: 'Helow'});
 });
 
 app.get('/api/courses', (req, res) =>{
