@@ -27,15 +27,22 @@ app.use(authentic);
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Liatening on port ${port}...`));*/
 
+
 console.log('Before');
-getUser(1, (user) => {
-
-    getRepositories(user.gitHubUsername, (repos) => {
-        console.log('Repos', repos);
-    });
-
-});
+getUser(1, getRepositories);
 console.log('After');
+
+function getRepositories(user) {
+    getRepositories(user.gitHubUsername, getCommits);
+}
+
+function getCommits(repos) {
+    getCommits(repo, displayCommits);
+}
+
+function displayCommits(commits) {
+    console.log(commits);
+}
 
 function getUser(id, callback) {
     setTimeout(() => {
