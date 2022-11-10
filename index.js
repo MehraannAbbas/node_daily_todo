@@ -27,8 +27,9 @@ app.use(authentic);
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Liatening on port ${port}...`));*/
 
+//////////////////////////////////////////////////////////////////////////////
 
-console.log('Before');
+/*console.log('Before');
 getUser(1, getRepositories);
 console.log('After');
 
@@ -56,4 +57,4 @@ function getRepositories(username, callback) {
         console.log('Calling GitHub API.....');
         callback(['repo1', 'repo2', 'repo3']);
     }, 2000);
-}
+}*/
